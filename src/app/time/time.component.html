@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+<mat-card>
+	<form (submit)="onTotalTime(totalTimeForm)" #totalTimeForm="ngForm">
+		<mat-form-field>
+			<mat-label>EmployeeID</mat-label>
+			<input matInput type="text" name="employeeid" ngModel>
+		</mat-form-field>
+		<br/>
+		<button mat-raised-button color="primary">Total Time</button>
+	</form>
+	Total Time : {{time}}
+</mat-card>
+<mat-card>
+	<select class="mdc-select__native-control" [(ngModel)]="selectedEmp" (change)="modelChanged(selectedEmp)">
+		<option *ngFor="let item of empList" value="{{item._id}}">{{item.name}}</option>
+	</select>
+</mat-card>
+<!-- <input matInput type="text" name="a" *ngFor="let obj of employee">{{obj | json}} -->

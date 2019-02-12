@@ -1,0 +1,11 @@
+<app-navbar></app-navbar>
+<mat-card>
+	<form (submit)="onCheckout(checkinForm)" #checkinForm="ngForm">
+		<mat-form-field>
+			<mat-label>EmployeeID</mat-label>
+			<input matInput type="text" name="employeeid" ngModel>
+		</mat-form-field>
+		<br/>
+		<button mat-raised-button color="primary">Checkout</button>
+	</form>
+</mat-card>

@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<mat-card>
+	<form (submit)="onAddEmployee(employeeForm)" #employeeForm="ngForm" >
+		<mat-form-field>
+			<mat-label>First Name</mat-label>
+			<input matInput type="text" name="name" ngModel>
+		</mat-form-field>
+		<mat-form-field>
+			<mat-label>Last Name</mat-label>
+			<input matInput type="text" name="lastname" ngModel>
+		</mat-form-field>
+		<mat-form-field>
+			<mat-label>Address</mat-label>
+			<textarea matInput type="text" name="address" ngModel></textarea>
+		</mat-form-field>
+		<mat-form-field>
+			<mat-label>Email</mat-label>
+			<input matInput type="email" name="email" ngModel>
+		</mat-form-field>
+		<mat-form-field>
+			<mat-label>Contact</mat-label>
+			<input matInput type="text" name="contact" ngModel>
+		</mat-form-field>
+		<mat-form-field>
+			<mat-label>Username</mat-label>
+			<input matInput type="text" name="username" ngModel>
+		</mat-form-field>
+		<mat-form-field>
+			<mat-label>Password</mat-label>
+			<input matInput type="Password" name="password" ngModel>
+		</mat-form-field>
+
+		 <button mat-raised-button color="primary" type="submit">Submit</button>
+	</form>
+</mat-card>
